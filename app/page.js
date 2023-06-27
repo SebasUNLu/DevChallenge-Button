@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div>
           <p className="text-black">Outline</p>
-          <StyledButton variant="outline" />
+          <StyledButton variant="outline"/>
         </div>
         <div>
           <p className="text-black">Text</p>
