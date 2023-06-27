@@ -4,8 +4,8 @@ import React from 'react';
 const Header = () => {
   return (
     <>
-      <div className='h-16 w-full flex items-center justify-center'>
-        <h1>Dev Challenge - Buttons</h1>
+      <div className='h-32 w-full flex items-center justify-center'>
+        <h1 className='text-orange-600 text-3xl font-bold'>Dev Challenge - Buttons</h1>
       </div>
       <div className='flex items-center justify-center p-4'>
         <h2>By Sebastián Marchetti :)</h2>
