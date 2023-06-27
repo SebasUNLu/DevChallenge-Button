@@ -25,28 +25,41 @@ const theme = {
       text: "bg-white hover:bg-[#D32F2F1A] focus:bg-[#D32F2F1A] text-[#D32F2F]"
     }
   },
+  sizes: {
+    sm: "",
+    md: "",
+    lg: "",
+  },
+  disable: {
+    solid: "text-[#9E9E9E] bg-[#E0E0E0]",
+    text: "bg-white text-[#9E9E9E]"
+  }
 }
 const variantTypes = ["solid", "outline", "text"]
 
-const StyledButton = ({ color = "default", variant = "solid", text = 'Default', disableShadow = false, }) => {
+const StyledButton = ({ color = "default", variant = "solid", text = 'Default', disableShadow = false, disable = false }) => {
 
   const styleGeneral = "py-2 px-4 rounded-md font-sans font-medium text-sm";
 
   // Seteo el estilo default del boton (solido, con el color default)
   let styleVariant = theme.colors.default.solid;
+  if (disable)
+    styleVariant = theme.disable.solid
+  else {
+    // Reviso si los colores y variantes son correctos 
+    // Colores --> default, primary, secondary, danger
+    // Variantes --> solid (default), outline, text
+    // Si los valores no son correctos, se les asigna los defaults (default y solid respectivamente)
+    const colorChosen = color in theme.colors ? color : "default";
+    const variantChosen = variantTypes.includes(variant) ? variant : "default"
+    styleVariant = theme.colors[colorChosen][variantChosen]
 
-  // Reviso si los colores y variantes son correctos 
-  // Colores --> default, primary, secondary, danger
-  // Variantes --> solid (default), outline, text
-  // Si los valores no son correctos, se les asigna los defaults (default y solid respectivamente)
-  const colorChosen = color in theme.colors ? color : "default";
-  const variantChosen = variantTypes.includes(variant) ? variant : "default"
-  styleVariant = theme.colors[colorChosen][variantChosen]
+  }
 
   const styleShadow = variant === "default" && !disableShadow ? "drop-shadow-md" : ""
 
   return (
-    <button className={`${styleGeneral} ${styleShadow} ${styleVariant}`}>
+    <button className={`${styleGeneral} ${styleShadow} ${styleVariant}`} disabled={disable}>
       {text}
     </button>
   );

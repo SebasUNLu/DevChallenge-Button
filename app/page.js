@@ -21,6 +21,10 @@ export default function Home() {
           <p className="text-black">Text</p>
           <StyledButton variant="text" />
         </div>
+        <div>
+          <p className="text-black">Disabled</p>
+          <StyledButton disable text="Disabled" />
+        </div>
       </div>
     </main>
   );
