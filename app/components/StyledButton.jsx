@@ -26,9 +26,9 @@ const theme = {
     }
   },
   sizes: {
-    sm: "py-[0.375em] px-[0.75em] h-[32px]",
-    md: "py-[0.5em] px-[1em] h-[36px]",
-    lg: "py-[0.688.em] px-[1.375em] h-[42px]",
+    sm: "h-[32px] py-[0.375em] px-[0.75em]",
+    md: "h-[36px] py-[0.5em] px-[1em]",
+    lg: "h-[42px] py-[0.688.em] px-[1.375em]",
   },
   disable: {
     solid: "text-[#9E9E9E] bg-[#E0E0E0]",
