@@ -26,9 +26,9 @@ const theme = {
     }
   },
   sizes: {
-    sm: "",
-    md: "",
-    lg: "",
+    sm: "py-[0.375em] px-[0.75em] h-[32px]",
+    md: "py-[0.5em] px-[1em] h-[36px]",
+    lg: "py-[0.688.em] px-[1.375em] h-[42px]",
   },
   disable: {
     solid: "text-[#9E9E9E] bg-[#E0E0E0]",
@@ -37,9 +37,9 @@ const theme = {
 }
 const variantTypes = ["solid", "outline", "text"]
 
-const StyledButton = ({ color = "default", variant = "default", text = 'Default', disableShadow = false, disable = false }) => {
+const StyledButton = ({ color = "default", variant = "default", text = 'Default', disableShadow = false, disable = false, size = "md" }) => {
 
-  const styleGeneral = "py-2 px-4 rounded-md font-sans font-medium text-sm";
+  const styleGeneral = "rounded-md font-sans font-medium text-sm";
 
   // Seteo el estilo default del boton (solido, con el color default)
   let styleVariant = theme.colors.default.solid;
@@ -53,13 +53,21 @@ const StyledButton = ({ color = "default", variant = "default", text = 'Default'
     const colorChosen = color in theme.colors ? color : "default";
     const variantChosen = variantTypes.includes(variant) ? variant : "default"
     styleVariant = theme.colors[colorChosen][variantChosen]
-
   }
 
-  const styleShadow = variant === "default" && !disableShadow && !disable ? "drop-shadow-md" : ""
+  const styleShadow = variant === "default" && !disableShadow && !disable ? "drop-shadow-md" : "";
+
+  let styleSize = theme.sizes.md
+  switch (size) {
+    case "sm": styleSize = theme.sizes.sm;
+      break;
+    case "lg": styleSize = theme.sizes.lg;
+      break;
+    default: break;
+  }
 
   return (
-    <button className={`${styleGeneral} ${styleShadow} ${styleVariant}`} disabled={disable}>
+    <button className={`${styleGeneral} ${styleShadow} ${styleVariant} ${styleSize}`} disabled={disable}>
       {text}
     </button>
   );

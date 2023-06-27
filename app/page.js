@@ -37,8 +37,15 @@ export default function Home() {
         <br />
         <h1>Deshabilitado</h1>
         <div className="flex flex-wrap gap-4 w-full">
-          <StyledButton text="Habilitado" />
-          <StyledButton text="Deshabilitado" disable />
+          <StyledButton color="secondary" text="Habilitado" />
+          <StyledButton color="secondary" text="Deshabilitado" disable />
+        </div>
+        <br />
+        <h1>Tamaños</h1>
+        <div className="flex flex-wrap gap-4 w-full">
+          <StyledButton color="primary" text="Pequeño" size="sm" />
+          <StyledButton color="primary" text="Mediano" size="md" />
+          <StyledButton color="primary" text="Grande" size="lg" />
         </div>
       </div>
     </main>
