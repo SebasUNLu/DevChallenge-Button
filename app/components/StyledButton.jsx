@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomIcon from './CustomIcon';
 
 // variant = [ default, outline, text ]
 
@@ -33,11 +34,11 @@ const theme = {
   disable: {
     solid: "text-[#9E9E9E] bg-[#E0E0E0]",
     text: "bg-white text-[#9E9E9E]"
-  }
+  },
 }
 const variantTypes = ["solid", "outline", "text"]
 
-const StyledButton = ({ color = "default", variant = "default", text = 'Default', disableShadow = false, disable = false, size = "md" }) => {
+const StyledButton = ({ color = "default", variant = "default", text = 'Default', disableShadow = false, disable = false, size = "md", startIcon = "", endIcon = "" }) => {
 
   const styleGeneral = "rounded-md font-sans font-medium text-sm";
 
@@ -67,8 +68,10 @@ const StyledButton = ({ color = "default", variant = "default", text = 'Default'
   }
 
   return (
-    <button className={`${styleGeneral} ${styleShadow} ${styleVariant} ${styleSize}`} disabled={disable}>
+    <button className={`${styleGeneral} ${styleShadow} ${styleVariant} ${styleSize} flex items-center justify-center`} disabled={disable}>
+      {startIcon && <CustomIcon iconName={startIcon} />}
       {text}
+      {endIcon && <CustomIcon end iconName={endIcon} />}
     </button>
   );
 };

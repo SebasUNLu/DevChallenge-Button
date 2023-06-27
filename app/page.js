@@ -47,6 +47,22 @@ export default function Home() {
           <StyledButton color="primary" text="Mediano" size="md" />
           <StyledButton color="primary" text="Grande" size="lg" />
         </div>
+        <br />
+        <h1>Íconos</h1>
+        <div className="flex flex-wrap gap-4 w-full">
+          <StyledButton text="No Icon" />
+          <StyledButton text="Home" color="primary" startIcon="home" />
+          <StyledButton text="Estrella" color="secondary" endIcon="star" />
+          <StyledButton text="Borrar" color="danger" endIcon="delete" />
+          <StyledButton
+            text="Cerrar"
+            color="primary"
+            startIcon="close"
+            endIcon="close"
+            variant="outline"
+          />
+          <StyledButton text="Stop!" disable startIcon="stop" endIcon="stop" />
+        </div>
       </div>
     </main>
   );
