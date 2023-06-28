@@ -8,11 +8,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://devchallenge-button.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/PBGMvIZYCI3grTMkT7bd">
       Solution
     </a>
     <span> | </span>
