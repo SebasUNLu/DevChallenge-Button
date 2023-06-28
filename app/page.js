@@ -21,7 +21,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between text-black">
       <Header />
       <div className="px-4 w-11/12">
-        <StyledTitle title={"Colores"} />
+        <StyledTitle title={"Colours"} />
         <StyledDiv>
           <StyledDiv title={"Default"}>
             <StyledButton />
@@ -37,7 +37,7 @@ export default function Home() {
           </StyledDiv>
         </StyledDiv>
 
-        <StyledTitle title={"Variantes de Estilos"} />
+        <StyledTitle title={"Style Variants"} />
         <StyledDiv>
           <StyledDiv title={"Solid (default)"}>
             <StyledButton />
@@ -52,33 +52,33 @@ export default function Home() {
           </StyledDiv>
         </StyledDiv>
 
-        <StyledTitle title={"Sombras"} />
+        <StyledTitle title={"Shadows"} />
         <StyledDiv>
           <StyledButton text="Shadow" />
           <StyledButton text="No shadow" disableShadow />
         </StyledDiv>
 
-        <StyledTitle title={"Deshabilitado"} />
+        <StyledTitle title={"Disabled"} />
         <StyledDiv>
-          <StyledButton color="secondary" text="Habilitado" />
-          <StyledButton color="secondary" text="Deshabilitado" disable />
+          <StyledButton color="secondary" text="Enabled" />
+          <StyledButton color="secondary" text="Disabled" disable />
         </StyledDiv>
 
         <StyledTitle title={"Tamaños"} />
         <StyledDiv>
-          <StyledButton color="primary" text="Pequeño (sm)" size="sm" />
-          <StyledButton color="primary" text="Mediano (md)" size="md" />
-          <StyledButton color="primary" text="Grande (lg)" size="lg" />
+          <StyledButton color="primary" text="Small (sm)" size="sm" />
+          <StyledButton color="primary" text="Medium (md)" size="md" />
+          <StyledButton color="primary" text="Large (lg)" size="lg" />
         </StyledDiv>
 
-        <StyledTitle title={"Íconos"} />
+        <StyledTitle title={"Icons"} />
         <StyledDiv>
           <StyledButton text="No Icon" />
           <StyledButton text="Home" color="primary" startIcon="home" />
-          <StyledButton text="Estrella" color="secondary" endIcon="star" />
-          <StyledButton text="Borrar" color="danger" endIcon="delete" />
+          <StyledButton text="Star" color="secondary" endIcon="star" />
+          <StyledButton text="Delete" color="danger" endIcon="delete" />
           <StyledButton
-            text="Cerrar"
+            text="Close"
             color="primary"
             startIcon="close"
             endIcon="close"

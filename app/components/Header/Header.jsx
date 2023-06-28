@@ -15,9 +15,9 @@ const Header = () => {
       </div>
       <div className='px-8 py-4'>
         <p className='text-center text-lg'>
-          Este es el primero de 8 desafios propuestos en la página <Link href={"https://devchallenges.io/"} target='_blank' className='font-bold text-orange-600'>DevChallenges.io</Link> que consiste en crear un componente Boton reutilizable y customizable. Entre las opciones de personalización están el tamaño, color, variante de estilo, habilitar, habilitar sombra y elección de entre 5 íconos, tanto al comienzo como al final del texto.</p>
-        <p className='text-center text-lg my-2'>Las tecnologías utilizadas fueron React con Next.js y tailwind para los estilos</p>
-        <p className='text-center text-lg'>Estas opciones pueden usarse en varias combinaciones como se muestran a continuación:</p>
+          This is the first of 8 challenges proposed on the page <Link href={"https://devchallenges.io/"} target='_blank' className='font-bold text-orange-600'>DevChallenges.io</Link> which consists of creating a reusable and customizable Button component. Among the customization options are the size, color, style variant, enable, enable shadow and a choice of 5 icons, both at the beginning and at the end of the text.</p>
+        <p className='text-center text-lg my-2'>The technologies used were React with Next.js and tailwind for the styles</p>
+        <p className='text-center text-lg'>These options can be used in various combinations as shown below:</p>
       </div>
     </>
   );
