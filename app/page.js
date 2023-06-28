@@ -13,7 +13,7 @@ const StyledDiv = ({ title, children }) => {
 };
 
 const StyledTitle = ({ title }) => {
-  return <h2 className="mt-4 mb-2">{title}</h2>;
+  return <h2 className="mt-4 mb-2 shadow-md">{title}</h2>;
 };
 
 export default function Home() {

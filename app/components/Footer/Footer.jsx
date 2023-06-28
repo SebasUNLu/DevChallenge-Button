@@ -7,7 +7,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
   return (
     <div className='h-16 w-full bg-slate-500 mt-8 flex justify-around'>
-      <p className='flex items-center justify-center'>
+      <p className='flex items-center justify-center text-white'>
         © {new Date().getFullYear()} Sebastián Marchetti
       </p>
       <div className='flex items-center justify-center'>

@@ -58,3 +58,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.gif-background {
+  background-image: url('../public/stars.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
